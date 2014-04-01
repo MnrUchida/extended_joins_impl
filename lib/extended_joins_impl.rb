@@ -31,10 +31,10 @@ module ExtendedJoinsImpl
   private
   def default_condition(table_name, alias_name)
     association = reflect_on_association(alias_name.to_sym) if alias_name.present?
-    association = if association.blank?
-                    reflect_on_association(table_name.singularize.to_sym) ||
-                        reflect_on_association(table_name.to_sym)
-                  end
+    if association.blank?
+      association = reflect_on_association(table_name.singularize.to_sym) ||
+          reflect_on_association(table_name.to_sym)
+    end
 
     options = association.try(:options) || {}
     if association.try(:macro) == :belongs_to

@@ -1,5 +1,0 @@
-test:
-  adapter: postgresql
-  encoding: unicode
-  database: extended_joins_impl
-  min_messages: WARNING

@@ -1,6 +1,5 @@
 ## coding: utf-8
 require 'rubygems'
 require 'active_record'
-require 'internal/app/models/user'
-require 'internal/app/models/type'
-require 'internal/app/models/note'
+require File.expand_path('../support/schema.rb', __FILE__)
+require File.expand_path('../support/models.rb', __FILE__)

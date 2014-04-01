@@ -1,4 +1,9 @@
 # coding: utf-8
+ActiveRecord::Base.establish_connection(
+    :adapter  => 'sqlite3',
+    :database => ':memory:'
+)
+
 ActiveRecord::Schema.define do
   create_table :users, :force => true do |t|
     t.references :type

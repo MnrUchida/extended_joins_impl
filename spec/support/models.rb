@@ -7,3 +7,9 @@ class User < ActiveRecord::Base
            foreign_key: :user_code
 
 end
+
+class Type < ActiveRecord::Base
+end
+
+class Note < ActiveRecord::Base
+end
