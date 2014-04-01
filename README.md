@@ -18,6 +18,7 @@ Or install it yourself as:
 
 ## Usage
 In these case
+
     class User < ActiveRecord::Base
       belongs_to :type
       has_many :user_notes,
