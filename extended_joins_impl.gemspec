@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = ExtendedJoinsImpl::VERSION
   spec.authors       = ["MnrUchida"]
   spec.email         = ["mukenan108@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Syntactic sugar for ActiveRecord.}
+  spec.description   = %q{Syntactic sugar for using a subquery and left outer join in ActiveRecord}
   spec.homepage      = ""
   spec.license       = "MIT"
 
