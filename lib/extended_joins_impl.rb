@@ -1,7 +1,7 @@
 require "extended_joins_impl/version"
 
 module ExtendedJoinsImpl
-  def extend_joins(join_type, table, params={})
+  def extended_joins(join_type, table, params={})
     on_key = params[:on] || default_condition(table.table_name, params[:as])
 
     joins_table_name = params[:as] || table.table_name
