@@ -41,7 +41,7 @@ In these case
     User.scoped.extended_joins(:outer, Type.scoped)
 
     # SELECT users.* FROM users INNER JOIN (SELECT * FROM types WHERE id = 3) types ON users.type_id = types.id
-    User.scoped.extended_joins(:inner, Type.where(id: 3)
+    User.scoped.extended_joins(:inner, Type.where(id: 3))
 
     # SELECT users.* FROM users INNER JOIN (SELECT * FROM types) user_types ON users.type_id = user_types.id
     User.scoped.extended_joins(:inner, Type.scoped, as: "user_types")
