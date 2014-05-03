@@ -1,3 +1,6 @@
+[![Build Status](https://secure.travis-ci.org/MnrUchida/extended_joins_impl.png)](http://travis-ci.org/MnrUchida/extended_joins_impl)
+
+
 # ExtendedJoinsImpl
 
 Syntactic sugar for using a subquery and left outer join in ActiveRecord
