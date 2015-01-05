@@ -25,9 +25,9 @@ module ExtendedJoinsImpl
     join_node = (join_type == :outer) ? Arel::Nodes::OuterJoin : Arel::Nodes::InnerJoin
     join_state = join_node.new( table_arel, Arel::Nodes::On.new(condition))
 
-    result = self.joins(join_state)
-    result = result.tap {|condition| condition.bind_values = table.bind_values }
-    result
+    self.joins(join_state).tap do |result_condition|
+      result_condition.bind_values = table.bind_values + result_condition.bind_values
+    end
   end
 
   private
