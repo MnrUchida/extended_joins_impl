@@ -48,7 +48,9 @@ module ExtendedJoinsImpl
 end
 
 module ActiveRecord
-  class Relation
-    include ExtendedJoinsImpl
+  class Base
+    class << self
+      include ExtendedJoinsImpl
+    end
   end
 end
